@@ -13,7 +13,7 @@ beforeEach(() => {
 });
 
 class FakeSocket extends EventEmitter {
-	public send(buffer: Buffer, port: number, address: string) {}
+	public send(buffer: Buffer, port: number, address: string) { }
 
 	public close() {
 		this.emit('close');

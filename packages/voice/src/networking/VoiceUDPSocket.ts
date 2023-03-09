@@ -138,7 +138,7 @@ export class VoiceUDPSocket extends EventEmitter {
 	public destroy() {
 		try {
 			this.socket.close();
-		} catch {}
+		} catch { }
 
 		clearInterval(this.keepAliveInterval);
 	}
@@ -156,7 +156,7 @@ export class VoiceUDPSocket extends EventEmitter {
 					const packet = parseLocalPacket(message);
 					this.socket.off('message', listener);
 					resolve(packet);
-				} catch {}
+				} catch { }
 			};
 
 			this.socket.on('message', listener);
